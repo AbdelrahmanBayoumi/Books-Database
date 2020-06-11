@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="BooksDatabase.jnlp">
+  <information>
+    <title>BooksDatabase</title>
+    <vendor>Abdelrahman Bayoumi</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  <shortcut><desktop/></shortcut>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="BooksDatabase.jar" size="65252" download="eager" />
+    <jar href="lib\fontawesomefx-8.9.jar" size="571068" download="eager" />
+    <jar href="lib\jfoenix-8.0.8.jar" size="2708772" download="eager" />
+    <jar href="lib\sqlite-jdbc-3.27.2.1.jar" size="6012107" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="BooksDatabase" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="main.BooksDatabase"  name="BooksDatabase" />
+  <update check="always"/>
+</jnlp>

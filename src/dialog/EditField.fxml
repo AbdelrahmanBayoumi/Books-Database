@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="50.0" stylesheets="@../resources/dark-theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dialog.EditFieldController">
+   <padding>
+      <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+   </padding>
+   <children>
+      <JFXTextField fx:id="FieldNameTextField" labelFloat="true" onAction="#confirmAction" prefHeight="44.0" prefWidth="460.0" promptText="Field Name" styleClass="text-field-normal">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXTextField>
+      <HBox alignment="CENTER" spacing="60.0">
+         <children>
+            <JFXButton cancelButton="true" onAction="#DiscardAction" prefWidth="160.0" style="-fx-background-color: gray;" text="Discard">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton defaultButton="true" onAction="#confirmAction" prefWidth="160.0" text="Confirm">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+</VBox>

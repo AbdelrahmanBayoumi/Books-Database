@@ -1,0 +1,10 @@
+[13-03-2020] [09:49:32 PM] => BooksDatabase launched
+[13-03-2020] [09:50:37 PM] => Exception[org.sqlite.SQLiteException: [SQLITE_CONSTRAINT]  Abort due to constraint violation (UNIQUE constraint failed: Field.field_name)] in utilities.DatabaseUtil.AddField(field_name: )
+[13-03-2020] [09:50:44 PM] => Exception[org.sqlite.SQLiteException: [SQLITE_CONSTRAINT]  Abort due to constraint violation (UNIQUE constraint failed: Field.field_name)] in utilities.DatabaseUtil.AddField(field_name: )
+[13-03-2020] [09:50:46 PM] => Exception[org.sqlite.SQLiteException: [SQLITE_CONSTRAINT]  Abort due to constraint violation (UNIQUE constraint failed: Field.field_name)] in utilities.DatabaseUtil.AddField(field_name: )
+[13-03-2020] [09:50:46 PM] => Exception[org.sqlite.SQLiteException: [SQLITE_CONSTRAINT]  Abort due to constraint violation (UNIQUE constraint failed: Field.field_name)] in utilities.DatabaseUtil.AddField(field_name: )
+[13-03-2020] [09:50:46 PM] => Exception[org.sqlite.SQLiteException: [SQLITE_CONSTRAINT]  Abort due to constraint violation (UNIQUE constraint failed: Field.field_name)] in utilities.DatabaseUtil.AddField(field_name: )
+[13-03-2020] [09:50:46 PM] => Exception[org.sqlite.SQLiteException: [SQLITE_CONSTRAINT]  Abort due to constraint violation (UNIQUE constraint failed: Field.field_name)] in utilities.DatabaseUtil.AddField(field_name: )
+[13-03-2020] [09:51:09 PM] => BooksDatabase Closed
+[13-03-2020] [09:55:57 PM] => BooksDatabase launched
+[13-03-2020] [09:57:06 PM] => BooksDatabase Closed

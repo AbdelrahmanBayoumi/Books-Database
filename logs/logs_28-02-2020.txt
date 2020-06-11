@@ -1,0 +1,4 @@
+[28-02-2020] [10:10:34 PM] => BooksDatabase launched
+[28-02-2020] [10:11:13 PM] => BooksDatabase Closed
+[28-02-2020] [10:21:57 PM] => BooksDatabase launched
+[28-02-2020] [10:22:00 PM] => BooksDatabase Closed

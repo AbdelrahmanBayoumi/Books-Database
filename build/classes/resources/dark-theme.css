@@ -1,0 +1,126 @@
+* {
+    -fx-primary : #2A2E37;
+    -fx-secondary : #3A3F48;
+    -fx-primarytext : white;
+    -fx-blue: #1976D2;
+    -fx-red: #FF0000;
+    -fx-color-1:#1976D2;
+}
+
+.root{
+    -fx-background-color: -fx-primary;
+}
+.button{
+    -fx-background-color: -fx-blue;
+    -fx-text-fill: white;
+    -fx-background-radius: 20;
+}
+.root-label{
+    -fx-text-fill: white;
+}
+.home-btn{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-border-color: -fx-secondary;
+    -fx-border-width: 5;
+    -fx-background-radius: 0;
+}
+.home-btn:hover{
+    -fx-background-color: -fx-secondary;
+    -fx-border-color: -fx-primarytext;
+    -fx-cursor: hand;
+}
+.footer .label{
+    -fx-text-fill: -fx-primarytext;
+}
+
+.text-field-normal{
+    -jfx-focus-color: -fx-primarytext;
+    -jfx-unfocus-color: -fx-primarytext;
+    -fx-prompt-text-fill: -fx-primarytext;
+    -fx-text-inner-color: -fx-primarytext;
+}
+.text-field-icon{
+    -fx-fill: white;   
+}
+/*TableView Default*/
+.table-view{
+    -fx-background-color: derive(-fx-primary, 10%);
+    -fx-font-size: 18px; 
+    -fx-border-color: derive(-fx-secondary, -60%);
+}
+.table-row-cell {
+    -fx-cell-size: 30px;
+}
+.table-view .column-header-background{
+    -fx-background-color: -fx-primary;
+}
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+.table-view .table-cell{
+    -fx-text-fill: white;
+    -fx-font-weight: BOLD;
+}
+.table-row-cell{
+    -fx-background-color: -fx-primary;
+    -fx-border-color: transparent;
+    -fx-table-cell-border-color: transparent;
+}
+.table-column{
+    -fx-alignment: CENTER;  
+}
+.table-row-cell:even{
+    -fx-background-color: derive(-fx-primary, 10%);
+}
+.table-row-cell:hover {
+    -fx-background-color: #455A64;
+
+    -fx-text-fill: -fx-primarytext;
+}
+.placeholder .label{
+    -fx-text-fill: white;
+}
+.table-view > .virtual-flow > .scroll-bar:vertical,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track-background, 
+.table-view > .virtual-flow > .scroll-bar:horizontal,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track-background {
+    -fx-background-color: transparent;
+}
+.table-view > .virtual-flow > .scroll-bar > .increment-button, 
+.table-view > .virtual-flow > .scroll-bar > .decrement-button {
+    -fx-text-fill: white;
+}
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb{
+    -fx-background-color: derive(-fx-primary, 60%);
+    -fx-border-color: transparent;
+    -fx-background-radius: 5em;
+}
+.table-view .filler{
+    -fx-fill: -fx-primary;
+    -fx-background-color: -fx-primary;
+}
+.table-context
+{
+    -fx-base: -fx-primary;
+}
+.combo-box-normal{
+    -jfx-focus-color: -fx-primarytext;
+    -jfx-unfocus-color: -fx-primarytext;
+    -fx-text-inner-color: -fx-primarytext;
+    -fx-prompt-text-fill: -fx-primarytext;
+    -fx-text-fill: -fx-primarytext;
+    -fx-font-size: 20;
+    -fx-font-weight: BOLD;
+}
+.combo-box .list-cell:filled:selected .text,
+.choice-box .list-cell:filled:selected .text {
+    -fx-fill:-fx-primarytext;
+}

@@ -1,0 +1,12 @@
+[17-02-2020] [10:24:09 PM] => BooksDatabase launched
+[17-02-2020] [10:25:20 PM] => BooksDatabase Closed
+[17-02-2020] [11:19:56 PM] => BooksDatabase launched
+[17-02-2020] [11:22:48 PM] => BooksDatabase Closed
+[17-02-2020] [11:24:58 PM] => BooksDatabase launched
+[17-02-2020] [11:30:37 PM] => Exception[java.lang.ArrayIndexOutOfBoundsException: 6] in add.AddViewController.EditBookAction(Book: Book{ID=2, Title=سيس, Author=بيسبريس, Publisher=هعهمتمنتنم, Description=تمنتمنتم, field=بسيبي})
+[17-02-2020] [11:31:45 PM] => BooksDatabase launched
+[17-02-2020] [11:31:50 PM] => BooksDatabase Closed
+[17-02-2020] [11:32:34 PM] => Exception[org.sqlite.SQLiteException: [SQLITE_CONSTRAINT]  Abort due to constraint violation (UNIQUE constraint failed: Field.field_name)] in utilities.DatabaseUtil.AddField(field_name: dfd)
+[17-02-2020] [11:32:57 PM] => BooksDatabase Closed
+[17-02-2020] [11:37:53 PM] => BooksDatabase launched
+[17-02-2020] [11:38:36 PM] => BooksDatabase Closed
