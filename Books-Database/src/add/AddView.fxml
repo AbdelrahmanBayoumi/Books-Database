@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" prefWidth="1000.0" styleClass="root" stylesheets="@../resources/dark-theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="add.AddViewController">
+   <content>
+      <VBox fx:id="parent" alignment="TOP_CENTER" spacing="10.0" styleClass="root">
+         <children>
+            <HBox>
+               <children>
+                  <JFXButton focusTraversable="false" onAction="#backAction" prefHeight="31.0" prefWidth="149.0" style="-fx-background-color: gray;" text="Back">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" style="-fx-border-width: 5; -fx-border-color: -fx-blue; -fx-border-radius: 35;">
+               <children>
+                  <JFXButton fx:id="bookBtn" focusTraversable="false" onAction="#showBooks" prefWidth="9000.0" style="-fx-background-radius: 0; -fx-background-radius: 20 0 0 20;" text="Books">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="25.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="fieldsBtn" focusTraversable="false" onAction="#showFields" prefWidth="9000.0" style="-fx-background-radius: 0 20 20 0;" styleClass="transparent-btn" text="Fields">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="25.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+            </HBox>
+            <AnchorPane fx:id="container" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox fx:id="FieldBox" alignment="CENTER" spacing="10.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox alignment="CENTER">
+                           <padding>
+                              <Insets bottom="10.0" top="10.0" />
+                           </padding>
+                           <children>
+                              <AnchorPane>
+                                 <children>
+                                    <JFXTextField fx:id="searchFieldBox" labelFloat="true" onKeyReleased="#searchFieldAction" prefHeight="44.0" prefWidth="603.0" promptText="Search" styleClass="text-field-normal">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets right="40.0" />
+                                       </padding>
+                                    </JFXTextField>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" layoutX="464.0" layoutY="26.0" size="30" styleClass="text-field-icon" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="7.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefWidth="978.0" spacing="50.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <VBox alignment="TOP_CENTER">
+                                 <children>
+                                    <VBox alignment="CENTER" spacing="50.0" style="-fx-border-color: -fx-primarytext; -fx-border-radius: 30; -fx-border-width: 3;">
+                                       <children>
+                                          <JFXTextField fx:id="FieldNameTextField" labelFloat="true" onAction="#addField" prefWidth="300.0" promptText="Field Name" styleClass="text-field-normal">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </JFXTextField>
+                                          <JFXButton onAction="#addField" prefWidth="160.0" text="Add">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                              <TableView fx:id="FieldsTable" prefHeight="389.0" prefWidth="485.0" HBox.hgrow="ALWAYS">
+                                <columns>
+                                  <TableColumn fx:id="FieldID_Col" maxWidth="1980.0" prefWidth="100.0" text="Field ID" />
+                                  <TableColumn fx:id="FieldName_Col" maxWidth="6000.0" prefWidth="200.0" text="Field Name" />
+                                    <TableColumn fx:id="FieldEdit_Col" maxWidth="1500.0" prefWidth="75.0" text="Edit" />
+                                    <TableColumn fx:id="FieldDelete_Col" maxWidth="1500.0" prefWidth="75.0" text="Delete" />
+                                </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                           <padding>
+                              <Insets left="20.0" right="20.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="Books_Box" alignment="CENTER" minHeight="1000.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <VBox alignment="CENTER" prefWidth="874.0" spacing="50.0" style="-fx-border-color: -fx-primarytext; -fx-border-radius: 30; -fx-border-width: 3;">
+                           <children>
+                              <HBox alignment="CENTER" spacing="20.0">
+                                 <children>
+                                    <JFXTextField fx:id="Title_TextFiled" labelFloat="true" prefHeight="44.0" prefWidth="249.0" promptText="Title" styleClass="text-field-normal">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="Author_TextFiled" labelFloat="true" prefHeight="44.0" prefWidth="249.0" promptText="Author" styleClass="text-field-normal">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="Publisher_TextFiled" labelFloat="true" prefHeight="44.0" prefWidth="249.0" promptText="Publisher" styleClass="text-field-normal">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </JFXTextField>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" spacing="20.0">
+                                 <children>
+                                    <JFXTextField fx:id="Description_TextFiled" labelFloat="true" prefHeight="44.0" prefWidth="346.0" promptText="Description" styleClass="text-field-normal">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="Location_TextFiled" labelFloat="true" prefHeight="44.0" prefWidth="346.0" promptText="Location" styleClass="text-field-normal">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <JFXComboBox fx:id="Field_ComboBox" labelFloat="true" prefHeight="44.0" prefWidth="247.0" promptText="Filed" styleClass="combo-box-normal" />
+                                 </children>
+                              </HBox>
+                              <JFXButton onAction="#addBookAction" prefWidth="160.0" text="Add">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                           <padding>
+                              <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets left="30.0" right="30.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <HBox alignment="CENTER">
+                           <padding>
+                              <Insets bottom="10.0" top="10.0" />
+                           </padding>
+                           <children>
+                              <AnchorPane>
+                                 <children>
+                                    <JFXTextField fx:id="SearchBookBox" labelFloat="true" onKeyReleased="#SearchBookAction" prefHeight="44.0" prefWidth="603.0" promptText="Search" styleClass="text-field-normal">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets right="40.0" />
+                                       </padding>
+                                    </JFXTextField>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" layoutX="464.0" layoutY="26.0" size="30" styleClass="text-field-icon" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="7.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <TableView fx:id="BooksTable" prefHeight="570.0" prefWidth="960.0" tableMenuButtonVisible="true">
+                           <columns>
+                              <TableColumn fx:id="BookID_Col" prefWidth="90.0" text="ID" />
+                              <TableColumn fx:id="BookName_Col" prefWidth="140.0" text="Name" />
+                              <TableColumn fx:id="BookAuthor_Col" prefWidth="140.0" text="Author" />
+                              <TableColumn fx:id="BookPublisher_Col" prefWidth="140.0" text="Publisher" />
+                              <TableColumn fx:id="BookDescription_Col" prefWidth="140.0" text="Description" />
+                              <TableColumn fx:id="BookLocation_Col" prefWidth="140.0" text="Location" />
+                              <TableColumn fx:id="BookFiled_Col" prefWidth="140.0" text="Filed" />
+                              <TableColumn fx:id="BookEdit_Col" prefWidth="75.0" text="Edit" />
+                              <TableColumn fx:id="BookDelete_Col" prefWidth="75.0" text="Delete" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                           <VBox.margin>
+                              <Insets left="30.0" right="30.0" />
+                           </VBox.margin>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="35.0" />
+               </VBox.margin>
+            </AnchorPane>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </content>
+</ScrollPane>

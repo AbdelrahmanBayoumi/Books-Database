@@ -16,7 +16,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="577.0" prefWidth="1000.0" styleClass="root" stylesheets="@../resources/dark-theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="show.ShowViewController">
    <children>
       <HBox alignment="TOP_RIGHT" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
@@ -155,7 +154,7 @@
                   </VBox>
                </content>
             </ScrollPane>
-            <AnchorPane prefHeight="497.0" prefWidth="939.0" styleClass="root">
+            <AnchorPane prefHeight="497.0" prefWidth="939.0" styleClass="root" HBox.hgrow="ALWAYS">
                <children>
                   <HBox alignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <padding>

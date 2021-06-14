@@ -25,6 +25,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 import utilities.DatabaseUtil;
 import static utilities.DatabaseUtil.con;
 import static utilities.DatabaseUtil.result;
@@ -86,9 +88,24 @@ public class AddViewController implements Initializable {
     private JFXTextField searchFieldBox;
     @FXML
     private JFXTextField SearchBookBox;
+    @FXML
+    private VBox FieldBox;
+    @FXML
+    private VBox Books_Box;
+    @FXML
+    private AnchorPane container;
+    @FXML
+    private JFXButton bookBtn;
+    @FXML
+    private JFXButton fieldsBtn;
+    private JFXButton focusedButton;
+    @FXML
+    private VBox parent;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        focusedButton = bookBtn;
+        container.getChildren().remove(FieldBox);
         // Field
         FieldID_Col.setCellValueFactory(new PropertyValueFactory("ID"));
         FieldID_Col.setStyle("-fx-alignment: center;");
@@ -149,8 +166,9 @@ public class AddViewController implements Initializable {
     @FXML
     private void addField(ActionEvent event) {
         String text = FieldNameTextField.getText().trim();
-        if(text.equals(""))
+        if (text.equals("")) {
             return;
+        }
         DatabaseUtil.AddField(text);
         // Update Table
         list_Field.clear();
@@ -407,7 +425,7 @@ public class AddViewController implements Initializable {
                 b = new Book(result.getInt(1), result.getString(2),
                         result.getString(3), result.getString(4),
                         result.getString(5), result.getString(6),
-                         getFiledbyID(result.getInt(7)));
+                        getFiledbyID(result.getInt(7)));
                 b.getDeleteButton().setOnAction(DeleteBookAction(b));
                 b.getEditButton().setOnAction(EditBookAction(b));
                 list.add(b);
@@ -416,5 +434,26 @@ public class AddViewController implements Initializable {
             Logger.log(Logger.Level.ERROR, "Exception[" + ex + "] in " + CLASS_NAME + ".selectBookSearch()");
         }
         return list;
+    }
+
+    @FXML
+    private void showBooks() {
+        if (bookBtn.getStyleClass().contains("transparent-btn")) {
+            bookBtn.getStyleClass().remove("transparent-btn");
+            fieldsBtn.getStyleClass().add("transparent-btn");
+            container.getChildren().remove(FieldBox);
+            container.getChildren().add(Books_Box);
+        }
+    }
+
+    @FXML
+    private void showFields() {
+        if (fieldsBtn.getStyleClass().contains("transparent-btn")) {
+            FieldBox.setVisible(true);
+            fieldsBtn.getStyleClass().remove("transparent-btn");
+            bookBtn.getStyleClass().add("transparent-btn");
+            container.getChildren().remove(Books_Box);
+            container.getChildren().add(FieldBox);
+        }
     }
 }

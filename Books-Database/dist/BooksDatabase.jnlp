@@ -9,7 +9,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="BooksDatabase.jar" size="65252" download="eager" />
+    <jar href="BooksDatabase.jar" size="65951" download="eager" />
     <jar href="lib\fontawesomefx-8.9.jar" size="571068" download="eager" />
     <jar href="lib\jfoenix-8.0.8.jar" size="2708772" download="eager" />
     <jar href="lib\sqlite-jdbc-3.27.2.1.jar" size="6012107" download="eager" />

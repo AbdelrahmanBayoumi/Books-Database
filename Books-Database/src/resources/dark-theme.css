@@ -15,6 +15,9 @@
     -fx-text-fill: white;
     -fx-background-radius: 20;
 }
+.transparent-btn{
+     -fx-background-color: transparent;
+}
 .root-label{
     -fx-text-fill: white;
 }
