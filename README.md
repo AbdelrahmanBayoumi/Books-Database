@@ -45,7 +45,7 @@ This project uses <a href="https://openjfx.io">JavaFX and Java 8</a> to build GU
 
 <div align="center">
  <a href="https://youtu.be/F5gARSGRgl0">
-  <img src="https://user-images.githubusercontent.com/48678280/121953830-54e75a00-cd5e-11eb-8e01-867d053aeea4.png" width="70%" hieght=="70%">
+  <img src="https://user-images.githubusercontent.com/48678280/121953830-54e75a00-cd5e-11eb-8e01-867d053aeea4.png" width="70%">
  </a>
 </div>
 
